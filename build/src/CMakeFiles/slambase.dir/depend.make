@@ -4,6 +4,7 @@
 src/CMakeFiles/slambase.dir/slamBase.cpp.o: ../include/slamBase.h
 src/CMakeFiles/slambase.dir/slamBase.cpp.o: /opt/ros/kinetic/include/opencv-3.1.0-dev/opencv/cxcore.h
 src/CMakeFiles/slambase.dir/slamBase.cpp.o: /opt/ros/kinetic/include/opencv-3.1.0-dev/opencv2/calib3d.hpp
+src/CMakeFiles/slambase.dir/slamBase.cpp.o: /opt/ros/kinetic/include/opencv-3.1.0-dev/opencv2/calib3d/calib3d.hpp
 src/CMakeFiles/slambase.dir/slamBase.cpp.o: /opt/ros/kinetic/include/opencv-3.1.0-dev/opencv2/calib3d/calib3d_c.h
 src/CMakeFiles/slambase.dir/slamBase.cpp.o: /opt/ros/kinetic/include/opencv-3.1.0-dev/opencv2/core.hpp
 src/CMakeFiles/slambase.dir/slamBase.cpp.o: /opt/ros/kinetic/include/opencv-3.1.0-dev/opencv2/core/affine.hpp
