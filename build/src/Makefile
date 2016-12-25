@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /root/Project/slam/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
@@ -77,6 +66,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,6 +111,51 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+src/CMakeFiles/main.dir/rule:
+	cd /root/Project/slam/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/main.dir/rule
+.PHONY : src/CMakeFiles/main.dir/rule
+
+# Convenience name for target.
+main: src/CMakeFiles/main.dir/rule
+
+.PHONY : main
+
+# fast build rule for target.
+main/fast:
+	cd /root/Project/slam/build && $(MAKE) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/build
+.PHONY : main/fast
+
+# Convenience name for target.
+src/CMakeFiles/slambase.dir/rule:
+	cd /root/Project/slam/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/slambase.dir/rule
+.PHONY : src/CMakeFiles/slambase.dir/rule
+
+# Convenience name for target.
+slambase: src/CMakeFiles/slambase.dir/rule
+
+.PHONY : slambase
+
+# fast build rule for target.
+slambase/fast:
+	cd /root/Project/slam/build && $(MAKE) -f src/CMakeFiles/slambase.dir/build.make src/CMakeFiles/slambase.dir/build
+.PHONY : slambase/fast
+
+# Convenience name for target.
+src/CMakeFiles/detectFeatures.dir/rule:
+	cd /root/Project/slam/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/detectFeatures.dir/rule
+.PHONY : src/CMakeFiles/detectFeatures.dir/rule
+
+# Convenience name for target.
+detectFeatures: src/CMakeFiles/detectFeatures.dir/rule
+
+.PHONY : detectFeatures
+
+# fast build rule for target.
+detectFeatures/fast:
+	cd /root/Project/slam/build && $(MAKE) -f src/CMakeFiles/detectFeatures.dir/build.make src/CMakeFiles/detectFeatures.dir/build
+.PHONY : detectFeatures/fast
+
+# Convenience name for target.
 src/CMakeFiles/generate_pointcloud.dir/rule:
 	cd /root/Project/slam/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/generate_pointcloud.dir/rule
 .PHONY : src/CMakeFiles/generate_pointcloud.dir/rule
@@ -125,20 +170,32 @@ generate_pointcloud/fast:
 	cd /root/Project/slam/build && $(MAKE) -f src/CMakeFiles/generate_pointcloud.dir/build.make src/CMakeFiles/generate_pointcloud.dir/build
 .PHONY : generate_pointcloud/fast
 
-# Convenience name for target.
-src/CMakeFiles/main.dir/rule:
-	cd /root/Project/slam/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/main.dir/rule
-.PHONY : src/CMakeFiles/main.dir/rule
+detectFeatures.o: detectFeatures.cpp.o
 
-# Convenience name for target.
-main: src/CMakeFiles/main.dir/rule
+.PHONY : detectFeatures.o
 
-.PHONY : main
+# target to build an object file
+detectFeatures.cpp.o:
+	cd /root/Project/slam/build && $(MAKE) -f src/CMakeFiles/detectFeatures.dir/build.make src/CMakeFiles/detectFeatures.dir/detectFeatures.cpp.o
+.PHONY : detectFeatures.cpp.o
 
-# fast build rule for target.
-main/fast:
-	cd /root/Project/slam/build && $(MAKE) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/build
-.PHONY : main/fast
+detectFeatures.i: detectFeatures.cpp.i
+
+.PHONY : detectFeatures.i
+
+# target to preprocess a source file
+detectFeatures.cpp.i:
+	cd /root/Project/slam/build && $(MAKE) -f src/CMakeFiles/detectFeatures.dir/build.make src/CMakeFiles/detectFeatures.dir/detectFeatures.cpp.i
+.PHONY : detectFeatures.cpp.i
+
+detectFeatures.s: detectFeatures.cpp.s
+
+.PHONY : detectFeatures.s
+
+# target to generate assembly for a file
+detectFeatures.cpp.s:
+	cd /root/Project/slam/build && $(MAKE) -f src/CMakeFiles/detectFeatures.dir/build.make src/CMakeFiles/detectFeatures.dir/detectFeatures.cpp.s
+.PHONY : detectFeatures.cpp.s
 
 generatePointCloud.o: generatePointCloud.cpp.o
 
@@ -194,22 +251,57 @@ main.cpp.s:
 	cd /root/Project/slam/build && $(MAKE) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+slamBase.o: slamBase.cpp.o
+
+.PHONY : slamBase.o
+
+# target to build an object file
+slamBase.cpp.o:
+	cd /root/Project/slam/build && $(MAKE) -f src/CMakeFiles/slambase.dir/build.make src/CMakeFiles/slambase.dir/slamBase.cpp.o
+.PHONY : slamBase.cpp.o
+
+slamBase.i: slamBase.cpp.i
+
+.PHONY : slamBase.i
+
+# target to preprocess a source file
+slamBase.cpp.i:
+	cd /root/Project/slam/build && $(MAKE) -f src/CMakeFiles/slambase.dir/build.make src/CMakeFiles/slambase.dir/slamBase.cpp.i
+.PHONY : slamBase.cpp.i
+
+slamBase.s: slamBase.cpp.s
+
+.PHONY : slamBase.s
+
+# target to generate assembly for a file
+slamBase.cpp.s:
+	cd /root/Project/slam/build && $(MAKE) -f src/CMakeFiles/slambase.dir/build.make src/CMakeFiles/slambase.dir/slamBase.cpp.s
+.PHONY : slamBase.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
-	@echo "... generate_pointcloud"
 	@echo "... edit_cache"
+	@echo "... rebuild_cache"
 	@echo "... main"
+	@echo "... slambase"
+	@echo "... detectFeatures"
+	@echo "... generate_pointcloud"
+	@echo "... detectFeatures.o"
+	@echo "... detectFeatures.i"
+	@echo "... detectFeatures.s"
 	@echo "... generatePointCloud.o"
 	@echo "... generatePointCloud.i"
 	@echo "... generatePointCloud.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... slamBase.o"
+	@echo "... slamBase.i"
+	@echo "... slamBase.s"
 .PHONY : help
 
 

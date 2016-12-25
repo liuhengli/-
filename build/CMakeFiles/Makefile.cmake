@@ -249,6 +249,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "src/CMakeFiles/generate_pointcloud.dir/DependInfo.cmake"
   "src/CMakeFiles/main.dir/DependInfo.cmake"
+  "src/CMakeFiles/slambase.dir/DependInfo.cmake"
+  "src/CMakeFiles/detectFeatures.dir/DependInfo.cmake"
+  "src/CMakeFiles/generate_pointcloud.dir/DependInfo.cmake"
   )

@@ -11,8 +11,8 @@
 
 //各种头文件
 //Ｃ++标准库
-include <fstream>
-include <vector>
+#include <fstream>
+#include <vector>
 
 using namespace std;
 
@@ -31,16 +31,16 @@ typedef pcl::PointCloud<PointT> PointCloud;
 //相机内参
 struct CMAERA_INTRINSIC_PARAMETERS
 {
-    double cx, xy, fx, fy, scale;
+    double cx, cy, fx, fy, scale;
 };
 
 //函数接口
 //image2PointCloud将rgb转换为点云
 PointCloud::Ptr image2PointCloud( cv::Mat& rgb, cv::Mat& depth, 
-CAMERA_INTRINSIC_PARAMETERS& camera );
+CMAERA_INTRINSIC_PARAMETERS& camera );
 
 //point2dTo3d将单个点从图像坐标转换为空间坐标
 //input: 3维点Point3f (u, v, d)
-cv::Point3f point2dTo3d(cv::Point3f& point, CAMERA_INTRINSIC_PARAMETERS& camera);
+cv::Point3f point2dTo3d(cv::Point3f& point, CMAERA_INTRINSIC_PARAMETERS& camera);
 
 

@@ -7,7 +7,7 @@
 
 #include "slamBase.h"
 
-PointCloud::Ptr image2PointCloud( cv::Mat& rgb, cv::Mat& depth, CAMERA_INTRINSIC_PARAMETERS& camera )
+PointCloud::Ptr image2PointCloud( cv::Mat& rgb, cv::Mat& depth, CMAERA_INTRINSIC_PARAMETERS& camera )
 {
     PointCloud::Ptr cloud ( new PointCloud );
 
@@ -44,7 +44,7 @@ PointCloud::Ptr image2PointCloud( cv::Mat& rgb, cv::Mat& depth, CAMERA_INTRINSIC
     return cloud;
 }
 
-cv::Point3f point2dTo3d( cv::Point3f& point, CAMERA_INTRINSIC_PARAMETERS& camera )
+cv::Point3f point2dTo3d( cv::Point3f& point, CMAERA_INTRINSIC_PARAMETERS& camera )
 {
     cv::Point3f p; // 3D 点
     p.z = double( point.z ) / camera.scale;
